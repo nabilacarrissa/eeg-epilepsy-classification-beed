@@ -65,7 +65,7 @@ project/
 ## 3. 📊 Dataset
 - **Nama Dataset:** Bangalore EEG Epilepsy Dataset (BEED)
 - **Sumber:** Dataset EEG medis
-- **Jumlah Data:** XXXX sampel *(sesuai output `df.shape`)*  
+- **Jumlah Data:** 8000 sampel *(sesuai output `df.shape`)*  
 - **Tipe Data:** Tabular (representasi sinyal EEG)
 - **Task:** Classification (Epileptic vs Non-Epileptic)
 
