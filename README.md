@@ -39,26 +39,28 @@ Tahapan utama dalam proyek ini meliputi:
 ---
 
 ## 📁 Struktur Folder
+
 project/
 │
-├── data/ # Dataset (tidak di-commit, download manual)
+├── data/    # Dataset (tidak di-commit, download manual)
+│   └── BEED_Data.csv
+├── notebooks/              # Jupyter notebooks
+│   └── ML_Project.ipynb
 │
-├── notebooks/ # Jupyter notebooks
-│ └── ML_Project.ipynb
+├── src/                    # Source code (opsional)
 │
-├── src/ # Source code (opsional)
+├── models/                 # Saved models
+│   ├── model_baseline.pkl
+│   ├── model_rf.pkl
+│   └── model_dl.h5
 │
-├── models/ # Saved models
-│ ├── model_baseline.pkl
-│ ├── model_rf.pkl
-│ └── model_dl.h5
+├── images/                 # Visualizations
+│   └── results/
 │
-├── images/ # Visualizations
-│ └── results/
-│
-├── requirements.txt # Dependencies
+├── requirements.txt        # Dependencies
 ├── .gitignore
 └── README.md
+
 
 ---
 
