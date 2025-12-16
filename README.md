@@ -5,7 +5,7 @@
 
 ## 👤 Informasi
 - **Nama:** Nabila Carrissa Dewi  
-- **Repository:** 
+- **Repository:** https://github.com/nabilacarrissa/eeg-epilepsy-classification-beed
 - **Video Presentasi:**  
 
 ---
