@@ -119,13 +119,6 @@ Metrik yang digunakan: Accuracy
 | Advanced ML   | 0.8371 (83.71%)  | Lebih stabil dan akurat |
 | Deep Learning | 0.9637 (96.37%)  | Performa terbaik        |
 
-🔎 Versi Alternatif (jika dosen minta F1-Score)
-| Model         | Score (F1-Score) | Catatan                 |
-| ------------- | ---------------- | ----------------------- |
-| Baseline      | 0.4762 (47.62%)  | Performa dasar          |
-| Advanced ML   | 0.8340 (83.40%)  | Lebih stabil dan akurat |
-| Deep Learning | 0.9637 (96.37%)  | Performa terbaik        |
-
 ---
 
 ## 7. 🏁 Kesimpulan
