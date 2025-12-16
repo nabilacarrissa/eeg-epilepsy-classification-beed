@@ -1,120 +1,117 @@
-🧠 EEG Epilepsy Detection using Machine Learning & Deep Learning
+# 📘 Klasifikasi Epileptic Seizure Menggunakan Sinyal EEG  
+## Machine Learning & Deep Learning (Bangalore EEG Epilepsy Dataset – BEED)
 
-(Bangalore EEG Epilepsy Dataset – BEED)
+---
 
-👤 Informasi
-Nama: Nabila Carrissa Dewi
-Repo: 
-Video: 
+## 👤 Informasi
+- **Nama:** Nabila Carrissa Dewi  
+- **Repository:** 
+- **Video Presentasi:**  
 
-1. 🎯 Ringkasan Proyek
+---
 
-Proyek ini bertujuan untuk mendeteksi dan mengklasifikasikan kejang epilepsi (epileptic seizure) menggunakan sinyal EEG (Electroencephalography) dengan pendekatan   Machine Learning dan Deep Learning. Dataset yang digunakan adalah Bangalore EEG Epilepsy Dataset (BEED) yang berisi data sinyal EEG yang telah diproses dalam bentuk tabular.
-Proyek ini dikembangkan sebagai tugas UAS mata kuliah Data Science / Machine Learning dan disusun mengikuti standar laporan proyek machine learning akademik.
+## 1. 🎯 Ringkasan Proyek
+Proyek ini bertujuan untuk menyelesaikan permasalahan **klasifikasi kejang epilepsi (epileptic seizure)** menggunakan **sinyal EEG (Electroencephalography)** dengan pendekatan **Machine Learning dan Deep Learning**.
 
-Tahapan yang dilakukan dalam proyek ini meliputi:
-  a. Melakukan data preparation pada dataset EEG
-  b. Membangun tiga model:
-    1. Model Baseline
-    2. Model Advanced Machine Learning
-    3. Model Deep Learning
-  c. Melakukan evaluasi performa model
-  d. Menentukan model terbaik berdasarkan metrik evaluasi yang relevan
+Tahapan utama dalam proyek ini meliputi:
+- Melakukan **data preparation** pada data EEG
+- Membangun **tiga model klasifikasi**, yaitu:
+  - Model Baseline
+  - Model Advanced Machine Learning
+  - Model Deep Learning
+- Melakukan **evaluasi performa model**
+- Menentukan **model terbaik** berdasarkan metrik evaluasi
 
-2. 📄 Problem & Goals
-Problem Statements :
-Data sinyal EEG memiliki pola yang kompleks dan sulit dianalisis secara manual.
+---
 
-Diperlukan model yang mampu membedakan sinyal epileptic seizure dan non-epileptic seizure secara akurat.
+## 2. 📄 Problem & Goals
 
-Perlu dilakukan perbandingan antara pendekatan machine learning tradisional dan deep learning.
+### **Problem Statements**
+1. Sinyal EEG memiliki pola yang kompleks dan sulit dianalisis secara manual.
+2. Dibutuhkan model yang mampu mengklasifikasikan kondisi epileptic dan non-epileptic secara akurat.
+3. Perlu dibandingkan performa metode machine learning konvensional dengan deep learning pada data EEG.
 
-Goals
+### **Goals**
+1. Mengembangkan model klasifikasi epilepsi berbasis sinyal EEG.
+2. Membandingkan performa baseline, advanced ML, dan deep learning model.
+3. Menentukan model terbaik berdasarkan hasil evaluasi.
 
-Membangun model klasifikasi epilepsi berbasis data EEG.
+---
 
-Membandingkan performa baseline, advanced ML, dan deep learning model.
-
-Menentukan model terbaik berdasarkan metrik evaluasi.
-
-📁 Struktur Folder
+## 📁 Struktur Folder
 project/
 │
-├── data/                   # Dataset (tidak di-commit, download manual)
+├── data/ # Dataset (tidak di-commit, download manual)
 │
-├── notebooks/              # Jupyter notebooks
-│   └── ML_Project.ipynb
+├── notebooks/ # Jupyter notebooks
+│ └── ML_Project.ipynb
 │
-├── src/                    # Source code (opsional)
+├── src/ # Source code (opsional)
 │
-├── models/                 # Saved models
-│   ├── model_baseline.pkl
-│   ├── model_rf.pkl
-│   └── model_dl.h5
+├── models/ # Saved models
+│ ├── model_baseline.pkl
+│ ├── model_rf.pkl
+│ └── model_dl.h5
 │
-├── images/                 # Visualizations
-│   └── results/
+├── images/ # Visualizations
+│ └── results/
 │
-├── requirements.txt        # Dependencies
+├── requirements.txt # Dependencies
 ├── .gitignore
 └── README.md
 
-3. 📊 Dataset
+---
 
-Sumber: Bangalore EEG Epilepsy Dataset (BEED)
+## 3. 📊 Dataset
+- **Nama Dataset:** Bangalore EEG Epilepsy Dataset (BEED)
+- **Sumber:** Dataset EEG medis
+- **Jumlah Data:** XXXX sampel *(sesuai output `df.shape`)*  
+- **Tipe Data:** Tabular (representasi sinyal EEG)
+- **Task:** Classification (Epileptic vs Non-Epileptic)
 
-Jumlah Data: [8000] sampel.
+### **Fitur Utama**
+| Fitur | Deskripsi |
+|------|-----------|
+| EEG Features | Nilai sinyal EEG dari berbagai channel |
+| Statistical Features | Mean, standard deviation, variance, dll |
+| Label | Kelas epileptic / non-epileptic |
 
-Tipe Data: Tabular (representasi sinyal EEG)
+---
 
-Task: Classification
+## 4. 🔧 Data Preparation
+Tahapan data preparation yang dilakukan:
+- **Cleaning:**  
+  Menangani missing values dan memastikan konsistensi data.
+- **Transformasi:**  
+  Normalisasi dan scaling fitur EEG.
+- **Splitting:**  
+  Pembagian data menjadi data training dan testing secara stratified.
 
-Fitur Utama
-| Fitur                | Deskripsi                              |
-| -------------------- | -------------------------------------- |
-| EEG_Channel          | Nilai sinyal EEG dari channel tertentu |
-| Statistical_Features | Mean, std, variance, dll               |
-| Label                | Kelas epileptic / non-epileptic        |
+---
 
-4. 🔧 Data Preparation
+## 5. 🤖 Modeling
+Model yang digunakan dalam proyek ini:
 
-Tahapan data preparation yang dilakukan meliputi:
+- **Model 1 – Baseline:**  
+  Logistic Regression
 
-Cleaning:
-Menangani missing values, data duplikat, dan outliers.
+- **Model 2 – Advanced Machine Learning:**  
+  Random Forest
 
-Transformasi:
-Normalisasi dan scaling fitur EEG.
+- **Model 3 – Deep Learning:**  
+  Neural Network (Multilayer Perceptron)
 
-Splitting:
-Pembagian data menjadi training dan testing set dengan stratified split.
+---
 
-5. 🤖 Modeling
+## 6. 🧪 Evaluation
 
-Model yang digunakan dalam proyek ini adalah:
+### **Metrik Evaluasi**
+- Accuracy
+- Precision
+- Recall
+- F1-Score
 
-Model 1 – Baseline:
-Logistic Regression / K-Nearest Neighbors (KNN)
-
-Model 2 – Advanced ML:
-Random Forest / Support Vector Machine (SVM)
-
-Model 3 – Deep Learning:
-Multilayer Perceptron (MLP) dengan minimal 2 hidden layer
-
-6. 🧪 Evaluation
-Metrik Evaluasi
-
-Accuracy
-
-Precision
-
-Recall
-
-F1-Score
-
-Confusion Matrix
-
+### **Hasil Evaluasi**
 Metrik yang digunakan: Accuracy
 | Model         | Score (Accuracy) | Catatan                 |
 | ------------- | ---------------- | ----------------------- |
@@ -129,34 +126,43 @@ Metrik yang digunakan: Accuracy
 | Advanced ML   | 0.8340 (83.40%)  | Lebih stabil dan akurat |
 | Deep Learning | 0.9637 (96.37%)  | Performa terbaik        |
 
-“Berdasarkan hasil evaluasi, model Deep Learning (Neural Network) menunjukkan performa terbaik dengan accuracy sebesar 96.37%, jauh melampaui model baseline dan advanced machine learning. Hal ini menunjukkan bahwa neural network mampu menangkap pola kompleks pada sinyal EEG secara lebih efektif.”
+---
 
-7. 🏁 Kesimpulan
+## 7. 🏁 Kesimpulan
+- **Model Terbaik:** Deep Learning (Neural Network)
+- **Alasan:**  
+  Model deep learning mampu menangkap pola kompleks pada sinyal EEG dengan sangat baik dan menghasilkan accuracy tertinggi.
+- **Insight Penting:**  
+  Pendekatan deep learning memberikan peningkatan performa yang signifikan dibandingkan metode machine learning konvensional dalam klasifikasi sinyal EEG.
 
-Model Terbaik: Deep Learning (MLP)
+---
 
-Alasan:
-Mampu menangkap pola kompleks pada sinyal EEG dengan performa evaluasi tertinggi.
+## 8. 🔮 Future Work
+- Menambahkan jumlah data EEG
+- Melakukan hyperparameter tuning
+- Mencoba arsitektur deep learning lain seperti CNN atau LSTM
+- Deployment ke sistem real-time atau aplikasi web
 
-Insight Penting:
-Deep learning memberikan peningkatan signifikan dibandingkan metode ML konvensional dalam klasifikasi EEG.
+---
 
-8. 🔮 Future Work
+## 9. 🔁 Reproducibility
+Untuk mereproduksi proyek ini:
+- Gunakan **Python 3.9+**
+- Install dependency melalui `requirements.txt`
+- Jalankan notebook `ML_Project.ipynb` secara berurutan
 
-Menambahkan jumlah data EEG
+---
 
-Melakukan hyperparameter tuning lebih lanjut
+## 🛠️ Tools & Libraries
+- Python
+- Pandas & NumPy
+- Scikit-learn
+- Matplotlib & Seaborn
+- TensorFlow / Keras
 
-Mencoba arsitektur deep learning lain (CNN / LSTM)
+---
 
-Deployment ke aplikasi web atau sistem real-time
-
-9. 🔁 Reproducibility
-
-Proyek ini dapat direproduksi dengan:
-
-Menggunakan Python 3.9+
-
-Menginstall dependency dari requirements.txt
-
-Menjalankan notebook ML_Project.ipynb secara berurutan
+## 👩‍🎓 Author
+**Nabila Carrissa Dewi**  
+Program Studi: Teknologi Rekayasa Perangkat Lunak
+Mata Kuliah: Data Science 
