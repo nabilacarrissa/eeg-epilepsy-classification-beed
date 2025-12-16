@@ -41,37 +41,29 @@ Tahapan utama dalam proyek ini meliputi:
 ## 📁 Struktur Folder
 
 EEG-Epilepsy-BEED/
-│
 ├── data/
 │   ├── raw/
 │   │   └── BEED_Data.csv          # Dataset asli (tidak di-commit)
-│   │
 │   └── processed/
 │       └── beed_clean.csv         # Data setelah preprocessing
-│
 ├── notebooks/
 │   └── EEG_Epilepsy_BEED.ipynb    # Notebook utama (end-to-end)
-│
 ├── models/
 │   ├── baseline_logreg.pkl        # Baseline model
 │   ├── random_forest.pkl          # Advanced ML model
 │   └── neural_network.h5          # Deep Learning model
-│
 ├── images/
 │   └── evaluation/
 │       ├── confusion_matrix.png
 │       ├── accuracy_plot.png
 │       └── loss_plot.png
-│
 ├── src/
 │   ├── preprocessing.py           # (opsional) fungsi preprocessing
 │   ├── training.py                # (opsional) training pipeline
 │   └── evaluation.py              # (opsional) evaluasi model
-│
 ├── requirements.txt               # Dependency
 ├── .gitignore
 └── README.md
-
 
 ---
 
