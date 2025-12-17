@@ -46,31 +46,33 @@ Tahapan utama dalam proyek ini meliputi:
 
 ## 📁 Struktur Folder
 
-betulkan tampilan dibawah ini 
 EEG-Epilepsy-BEED/
-├── data/
-│   ├── raw/
-│   │   └── BEED_Data.csv          # Dataset asli (tidak di-commit)
-│   └── processed/
-│       └── beed_clean.csv         # Data setelah preprocessing
-├── notebooks/
-│   └── EEG_Epilepsy_BEED.ipynb    # Notebook utama (end-to-end)
-├── models/
-│   ├── baseline_logreg.pkl        # Baseline model
-│   ├── random_forest.pkl          # Advanced ML model
-│   └── neural_network.h5          # Deep Learning model
-├── images/
-│   └── evaluation/
-│       ├── confusion_matrix.png
-│       ├── accuracy_plot.png
-│       └── loss_plot.png
-├── src/
-│   ├── preprocessing.py           # (opsional) fungsi preprocessing
-│   ├── training.py                # (opsional) training pipeline
-│   └── evaluation.py              # (opsional) evaluasi model
-├── requirements.txt               # Dependency
-├── .gitignore
-└── README.md
+├── Dataset/
+│   └── BEED_Data.csv
+│
+├── Image/
+│   ├── Correlation Heatmap.png
+│   ├── Distribusi Fitur Numerik.png
+│   ├── Distribusi Target.png
+│   ├── Matrix Logistic Regression.png
+│   ├── Matrix Random Forest.png
+│   ├── Matrix Neural Network.png
+│   ├── Deep Learning Model.png
+│   ├── Random Forest Classifier.png
+│   └── Visualisasi Perbandingan.png
+│
+├── Model/
+│   ├── best_model_dl.h5
+│   ├── scaler.pkl
+│   └── label_encoders.pkl
+│
+├── Notebooks/
+│   └── 234311021_Nabila_Carrissa_Dewi_Data_Science.ipynb
+│
+├── README.md
+├── Checklist Submit.md
+├── requirements.txt
+└── .gitignore
 
 ---
 
