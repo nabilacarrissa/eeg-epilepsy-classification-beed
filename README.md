@@ -1,19 +1,23 @@
-# 📘 Klasifikasi Epileptic Seizure Menggunakan Sinyal EEG  
+# 📘 Klasifikasi Epileptic Seizure Menggunakan Sinyal EEG
+
 ## Machine Learning & Deep Learning (Bangalore EEG Epilepsy Dataset – BEED)
 
 ---
 
 ## 👤 Informasi
-- **Nama:** Nabila Carrissa Dewi  
+
+- **Nama:** Nabila Carrissa Dewi
 - **Repository:** https://github.com/nabilacarrissa/eeg-epilepsy-classification-beed
-- **Video Presentasi:**  
+- **Video Presentasi:** https://youtu.be/GGM0MhEDik8
 
 ---
 
 ## 1. 🎯 Ringkasan Proyek
+
 Proyek ini bertujuan untuk menyelesaikan permasalahan **klasifikasi kejang epilepsi (epileptic seizure)** menggunakan **sinyal EEG (Electroencephalography)** dengan pendekatan **Machine Learning dan Deep Learning**.
 
 Tahapan utama dalam proyek ini meliputi:
+
 - Melakukan **data preparation** pada data EEG
 - Membangun **tiga model klasifikasi**, yaitu:
   - Model Baseline
@@ -27,11 +31,13 @@ Tahapan utama dalam proyek ini meliputi:
 ## 2. 📄 Problem & Goals
 
 ### **Problem Statements**
+
 1. Sinyal EEG memiliki pola yang kompleks dan sulit dianalisis secara manual.
 2. Dibutuhkan model yang mampu mengklasifikasikan kondisi epileptic dan non-epileptic secara akurat.
 3. Perlu dibandingkan performa metode machine learning konvensional dengan deep learning pada data EEG.
 
 ### **Goals**
+
 1. Mengembangkan model klasifikasi epilepsi berbasis sinyal EEG.
 2. Membandingkan performa baseline, advanced ML, dan deep learning model.
 3. Menentukan model terbaik berdasarkan hasil evaluasi.
@@ -41,50 +47,62 @@ Tahapan utama dalam proyek ini meliputi:
 ## 📁 Struktur Folder
 
 EEG-Epilepsy-BEED/
+│
 ├── data/
-│   ├── raw/
-│   │   └── BEED_Data.csv          # Dataset asli (tidak di-commit)
-│   └── processed/
-│       └── beed_clean.csv         # Data setelah preprocessing
+│ ├── raw/
+│ │ └── BEED_Data.csv # Dataset asli (jangan di-commit ke GitHub jika >100MB)
+│ └── processed/
+│ └── beed_clean.csv # (Opsional) Data setelah cleaning/preprocessing
+│
 ├── notebooks/
-│   └── EEG_Epilepsy_BEED.ipynb    # Notebook utama (end-to-end)
+│ └── EEG_Epilepsy_BEED.ipynb # Notebook utama (hasil konversi dari .py kamu)
+│
 ├── models/
-│   ├── baseline_logreg.pkl        # Baseline model
-│   ├── random_forest.pkl          # Advanced ML model
-│   └── neural_network.h5          # Deep Learning model
-├── images/
-│   └── evaluation/
-│       ├── confusion_matrix.png
-│       ├── accuracy_plot.png
-│       └── loss_plot.png
-├── src/
-│   ├── preprocessing.py           # (opsional) fungsi preprocessing
-│   ├── training.py                # (opsional) training pipeline
-│   └── evaluation.py              # (opsional) evaluasi model
-├── requirements.txt               # Dependency
-├── .gitignore
-└── README.md
+│ ├── best_model_dl.h5 # Model Neural Network (disimpan dari kodemu)
+│ ├── best_model_rf.pkl # Model Random Forest
+│ ├── best_model_baseline.pkl # Model Baseline
+│ ├── scaler.pkl # WAJIB: Untuk normalisasi data baru
+│ └── label_encoders.pkl # WAJIB: Untuk encode kategori data baru
+│
+├── images/ # Simpan plot hasil analisis di sini
+│ └── evaluation/
+│ ├── comparison_chart.png
+│ ├── confusion_matrix_dl.png
+│ └── learning_curve.png
+│
+├── src/ # (Opsional) Jika kamu memecah kode notebook jadi script
+│ ├── **init**.py
+│ ├── preprocessing.py
+│ └── training.py
+│
+├── .gitignore # List file yang diabaikan git (misal: folder venv, **pycache**)
+├── requirements.txt # Daftar library (numpy, pandas, tensorflow, dll)
+└── README.md # Dokumentasi proyek
 
 ---
 
 ## 3. 📊 Dataset
+
 - **Nama Dataset:** Bangalore EEG Epilepsy Dataset (BEED)
 - **Sumber:** Dataset EEG medis
-- **Jumlah Data:** 8000 sampel *(sesuai output `df.shape`)*  
+- **Jumlah Data:** 8000 sampel _(sesuai output `df.shape`)_
 - **Tipe Data:** Tabular (representasi sinyal EEG)
 - **Task:** Classification (Epileptic vs Non-Epileptic)
 
 ### **Fitur Utama**
-| Fitur | Deskripsi |
-|------|-----------|
-| EEG Features | Nilai sinyal EEG dari berbagai channel |
+
+| Fitur                | Deskripsi                               |
+| -------------------- | --------------------------------------- |
+| EEG Features         | Nilai sinyal EEG dari berbagai channel  |
 | Statistical Features | Mean, standard deviation, variance, dll |
-| Label | Kelas epileptic / non-epileptic |
+| Label                | Kelas epileptic / non-epileptic         |
 
 ---
 
 ## 4. 🔧 Data Preparation
+
 Tahapan data preparation yang dilakukan:
+
 - **Cleaning:**  
   Menangani missing values dan memastikan konsistensi data.
 - **Transformasi:**  
@@ -95,6 +113,7 @@ Tahapan data preparation yang dilakukan:
 ---
 
 ## 5. 🤖 Modeling
+
 Model yang digunakan dalam proyek ini:
 
 - **Model 1 – Baseline:**  
@@ -111,22 +130,25 @@ Model yang digunakan dalam proyek ini:
 ## 6. 🧪 Evaluation
 
 ### **Metrik Evaluasi**
+
 - Accuracy
 - Precision
 - Recall
 - F1-Score
 
 ### **Hasil Evaluasi**
+
 Metrik yang digunakan: Accuracy
-| Model         | Score (Accuracy) | Catatan                 |
+| Model | Score (Accuracy) | Catatan |
 | ------------- | ---------------- | ----------------------- |
-| Baseline      | 0.4731 (47.31%)  | Performa dasar          |
-| Advanced ML   | 0.8371 (83.71%)  | Lebih stabil dan akurat |
-| Deep Learning | 0.9637 (96.37%)  | Performa terbaik        |
+| Baseline | 0.4731 (47.31%) | Performa dasar |
+| Advanced ML | 0.8371 (83.71%) | Lebih stabil dan akurat |
+| Deep Learning | 0.9637 (96.37%) | Performa terbaik |
 
 ---
 
 ## 7. 🏁 Kesimpulan
+
 - **Model Terbaik:** Deep Learning (Neural Network)
 - **Alasan:**  
   Model deep learning mampu menangkap pola kompleks pada sinyal EEG dengan sangat baik dan menghasilkan accuracy tertinggi.
@@ -136,6 +158,7 @@ Metrik yang digunakan: Accuracy
 ---
 
 ## 8. 🔮 Future Work
+
 - Menambahkan jumlah data EEG
 - Melakukan hyperparameter tuning
 - Mencoba arsitektur deep learning lain seperti CNN atau LSTM
@@ -144,7 +167,9 @@ Metrik yang digunakan: Accuracy
 ---
 
 ## 9. 🔁 Reproducibility
+
 Untuk mereproduksi proyek ini:
+
 - Gunakan **Python 3.9+**
 - Install dependency melalui `requirements.txt`
 - Jalankan notebook `ML_Project.ipynb` secara berurutan
@@ -152,6 +177,7 @@ Untuk mereproduksi proyek ini:
 ---
 
 ## 🛠️ Tools & Libraries
+
 - Python
 - Pandas & NumPy
 - Scikit-learn
@@ -161,6 +187,7 @@ Untuk mereproduksi proyek ini:
 ---
 
 ## 👩‍🎓 Author
+
 **Nabila Carrissa Dewi**  
 Program Studi: Teknologi Rekayasa Perangkat Lunak
-Mata Kuliah: Data Science 
+Mata Kuliah: Data Science
