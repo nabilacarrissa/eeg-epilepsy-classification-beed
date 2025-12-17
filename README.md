@@ -46,38 +46,31 @@ Tahapan utama dalam proyek ini meliputi:
 
 ## 📁 Struktur Folder
 
+betulkan tampilan dibawah ini 
 EEG-Epilepsy-BEED/
-│
 ├── data/
-│ ├── raw/
-│ │ └── BEED_Data.csv # Dataset asli (jangan di-commit ke GitHub jika >100MB)
-│ └── processed/
-│ └── beed_clean.csv # (Opsional) Data setelah cleaning/preprocessing
-│
+│   ├── raw/
+│   │   └── BEED_Data.csv          # Dataset asli (tidak di-commit)
+│   └── processed/
+│       └── beed_clean.csv         # Data setelah preprocessing
 ├── notebooks/
-│ └── EEG_Epilepsy_BEED.ipynb # Notebook utama (hasil konversi dari .py kamu)
-│
+│   └── EEG_Epilepsy_BEED.ipynb    # Notebook utama (end-to-end)
 ├── models/
-│ ├── best_model_dl.h5 # Model Neural Network (disimpan dari kodemu)
-│ ├── best_model_rf.pkl # Model Random Forest
-│ ├── best_model_baseline.pkl # Model Baseline
-│ ├── scaler.pkl # WAJIB: Untuk normalisasi data baru
-│ └── label_encoders.pkl # WAJIB: Untuk encode kategori data baru
-│
-├── images/ # Simpan plot hasil analisis di sini
-│ └── evaluation/
-│ ├── comparison_chart.png
-│ ├── confusion_matrix_dl.png
-│ └── learning_curve.png
-│
-├── src/ # (Opsional) Jika kamu memecah kode notebook jadi script
-│ ├── **init**.py
-│ ├── preprocessing.py
-│ └── training.py
-│
-├── .gitignore # List file yang diabaikan git (misal: folder venv, **pycache**)
-├── requirements.txt # Daftar library (numpy, pandas, tensorflow, dll)
-└── README.md # Dokumentasi proyek
+│   ├── baseline_logreg.pkl        # Baseline model
+│   ├── random_forest.pkl          # Advanced ML model
+│   └── neural_network.h5          # Deep Learning model
+├── images/
+│   └── evaluation/
+│       ├── confusion_matrix.png
+│       ├── accuracy_plot.png
+│       └── loss_plot.png
+├── src/
+│   ├── preprocessing.py           # (opsional) fungsi preprocessing
+│   ├── training.py                # (opsional) training pipeline
+│   └── evaluation.py              # (opsional) evaluasi model
+├── requirements.txt               # Dependency
+├── .gitignore
+└── README.md
 
 ---
 
