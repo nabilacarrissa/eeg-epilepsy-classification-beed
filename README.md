@@ -45,35 +45,35 @@ Tahapan utama dalam proyek ini meliputi:
 ---
 
 ## 📁 Struktur Folder
-
+```
 EEG-Epilepsy-BEED/
 ├── Dataset/
-│   └── BEED_Data.csv
+│ └── BEED_Data.csv
 │
 ├── Image/
-│   ├── Correlation Heatmap.png
-│   ├── Distribusi Fitur Numerik.png
-│   ├── Distribusi Target.png
-│   ├── Matrix Logistic Regression.png
-│   ├── Matrix Random Forest.png
-│   ├── Matrix Neural Network.png
-│   ├── Deep Learning Model.png
-│   ├── Random Forest Classifier.png
-│   └── Visualisasi Perbandingan.png
+│ ├── Correlation Heatmap.png
+│ ├── Distribusi Fitur Numerik.png
+│ ├── Distribusi Target.png
+│ ├── Matrix Logistic Regression.png
+│ ├── Matrix Random Forest.png
+│ ├── Matrix Neural Network.png
+│ ├── Deep Learning Model.png
+│ ├── Random Forest Classifier.png
+│ └── Visualisasi Perbandingan.png
 │
 ├── Model/
-│   ├── best_model_dl.h5
-│   ├── scaler.pkl
-│   └── label_encoders.pkl
+│ ├── best_model_dl.h5
+│ ├── scaler.pkl
+│ └── label_encoders.pkl
 │
 ├── Notebooks/
-│   └── 234311021_Nabila_Carrissa_Dewi_Data_Science.ipynb
+│ └── 234311021_Nabila_Carrissa_Dewi_Data_Science.ipynb
 │
 ├── README.md
 ├── Checklist Submit.md
 ├── requirements.txt
 └── .gitignore
-
+```
 ---
 
 ## 3. 📊 Dataset
